@@ -41,7 +41,7 @@ bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]'>
   Search
   </button>
    </form>
-   <img src={assets.main_car} alt="banner" className='max-h-74' />
+   <img src={assets.main_banner} alt="banner" className='max-h-74' />
 
     </div>
   )
