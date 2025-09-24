@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="100" viewBox="0 0 360 100" role="img" aria-labelledby="title desc">
+  <title id="title">FitOnRent logo - horizontal</title>
+  <desc id="desc">A simple hanger icon with the brand name FitOnRent.</desc>
+
+  <!-- Background is transparent so it works on any surface -->
+  <g fill="none" stroke="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Hanger outline -->
+    <g transform="translate(12,8)">
+      <path d="M28 6
+               C28 2 32 0 36 0
+               C40 0 44 2 44 6
+               C44 9 41 12 36 12
+               C31 12 28 9 28 6
+               Z" fill="#2563EB" opacity="1"/>
+      <path d="M6 36 L64 36
+               C64 36 56 20 36 20
+               C16 20 8 36 8 36 Z"
+            stroke="#2563EB" stroke-width="4" fill="none"/>
+      <path d="M36 12 L36 20" stroke="#2563EB" stroke-width="4" />
+    </g>
+
+    <!-- Brand text -->
+    <text x="90" y="48" font-family="'Outfit', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+          font-weight="700" font-size="28" fill="#0F172A">
+      FitOn<tspan fill="#2563EB">Rent</tspan>
+    </text>
+
+    <!-- Tagline -->
+    <text x="100" y="74" font-family="'Outfit', sans-serif" font-size="24" fill="#6B7280">Wear. Share. Repeat.</text>
+  </g>
+</svg>
