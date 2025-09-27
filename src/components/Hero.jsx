@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { assets, cityList } from '../assets/assets'
 
-const Hero = () => {
+const Hero = () => { 
 
    const [pickupLocation,setPickupLocation] = useState()
  
@@ -12,8 +12,8 @@ const Hero = () => {
          Upgrade Your Style with Our Rental Collection
        </h1>
    <form className='flex flex-col md:flex-row items-start md:items-center
-justify-between p-6 rounded-lg md:rounded-full w-full max-w-[20rem] md:max-w-[50rem]
-bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]'>
+    justify-between p-6 rounded-lg md:rounded-full w-full max-w-[20rem] md:max-w-[50rem]
+  bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]'>
 
 <div className='flex flex-col md:flex-row items-start md:items-center gap-10 min-md:ml-8'>
 
@@ -26,12 +26,12 @@ bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]'>
 </div>
 <div className='flex flex-col items-start gap-2'>
    <label htmlFor='pickup-date'>Pick-up Date</label>
-   <input type="date" id='pickup-date' min={new Date().toISOString().split('T')[0]}
+   <input type="date" id='pickup-date' min={new Date().toISOString().split('T')[0]} 
    className='text-sm text-gray-500' required/>
 </div>
 <div className='flex flex-col items-start gap-2'>
    <label htmlFor='return-date'>Return Date</label>
-   <input type="date" id='return-date'
+   <input type="date" id='return-date' 
    className='text-sm text-gray-500' required/>
 </div>
 

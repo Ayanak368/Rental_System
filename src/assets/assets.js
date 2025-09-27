@@ -41,6 +41,10 @@ import car_image2 from "./car_image2.png";
 import car_image3 from "./car_image3.png";
 import car_image4 from "./car_image4.png";
 import main_banner from "./main_banner.png";
+import Royal_Crimson_Lehenga from "./Royal_Crimson_Lehenga.png";
+import Midnight_Blue_Gown_Lehenga from "./Midnight_Blue_Gown_Lehenga.png";
+import Golden_Choker_Necklace from "./Golden_Choker_Necklace.png";
+import earing from "./earing.png";
 export const cityList = [
   "Calicut",
   "Kasargod",
@@ -94,6 +98,10 @@ export const assets = {
   car_image3,
   car_image4,
   main_banner,
+  Royal_Crimson_Lehenga,
+  Midnight_Blue_Gown_Lehenga,
+  Golden_Choker_Necklace,
+  earing,
 };
 
 export const menuLinks = [
@@ -143,17 +151,17 @@ export const dummyCarData = [
     owner: "67fe3467ed8a8fe17d0ba6e2",
     brand: "BMW",
     model: "X5",
-    image: car_image1,
+    image: Royal_Crimson_Lehenga,
     year: 2006,
-    category: "SUV",
+    name: "Royal Crimson Lehenga",
     seating_capacity: 4,
     fuel_type: "Hybrid",
     transmission: "Semi-Automatic",
-    pricePerDay: 300,
+    pricePerDay: 1000,
     location: "New York",
     description:
-      "The BMW X5 is a mid-size luxury SUV produced by BMW. The X5 made its debut in 1999 as the first SUV ever produced by BMW.",
-    isAvaliable: true,
+      "Deep crimson velvet with golden embroidery. Perfect for weddings and grand celebrations.",
+    isAvailable: true,
     createdAt: "2025-04-16T07:26:56.215Z",
   },
   {
@@ -161,17 +169,17 @@ export const dummyCarData = [
     owner: "67fe3467ed8a8fe17d0ba6e2",
     brand: "Toyota",
     model: "Corolla",
-    image: car_image2,
+    image: Midnight_Blue_Gown_Lehenga,
     year: 2021,
-    category: "Sedan",
+    name: "Midnight Blue Gown Lehenga",
     seating_capacity: 4,
     fuel_type: "Diesel",
     transmission: "Manual",
-    pricePerDay: 130,
+    pricePerDay: 900,
     location: "Chicago",
     description:
-      "The Toyota Corolla is a mid-size luxury sedan produced by Toyota. The Corolla made its debut in 2008 as the first sedan ever produced by Toyota.",
-    isAvaliable: true,
+      "Flowing silk gown with sequin details. Ideal for evening parties and receptions. create this lahenga.",
+    isAvailable: true,
     createdAt: "2025-04-16T08:33:57.993Z",
   },
   {
@@ -179,17 +187,17 @@ export const dummyCarData = [
     owner: "67fe3467ed8a8fe17d0ba6e2",
     brand: "Jeep ",
     model: "Wrangler",
-    image: car_image3,
+    image: Golden_Choker_Necklace,
     year: 2023,
-    category: "SUV",
+    name: "Golden Choker Necklace",
     seating_capacity: 4,
     fuel_type: "Hybrid",
     transmission: "Automatic",
-    pricePerDay: 200,
+    pricePerDay: 1500,
     location: "Los Angeles",
     description:
-      "The Jeep Wrangler is a mid-size luxury SUV produced by Jeep. The Wrangler made its debut in 2003 as the first SUV ever produced by Jeep.",
-    isAvaliable: true,
+      " Traditional gold-plated choker with filigree design. Complements ethnic outfits beautifully. create this neckalace",
+    isAvailable: true,
     createdAt: "2025-04-16T08:34:39.592Z",
   },
   {
@@ -197,17 +205,17 @@ export const dummyCarData = [
     owner: "67fe3467ed8a8fe17d0ba6e2",
     brand: "Ford",
     model: "Neo 6",
-    image: car_image4,
+    image: earing,
     year: 2022,
-    category: "Sedan",
+    name: "Pearl Drop Earrings",
     seating_capacity: 2,
     fuel_type: "Diesel",
     transmission: "Semi-Automatic",
     pricePerDay: 209,
     location: "Houston",
     description:
-      "This is a mid-size luxury sedan produced by Toyota. The Corolla made its debut in 2008 as the first sedan ever produced by Toyota.",
-    isAvaliable: true,
+      "Elegant pearls with gold accents. Subtle touch for festive or wedding wear.",
+    isAvailable: true,
     createdAt: "2025-04-17T06:15:47.318Z",
   },
 ];
