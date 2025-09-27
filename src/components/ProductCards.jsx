@@ -1,10 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const ProductCards = ({product}) => {
 
     const currency =import.meta.env.VITE_CURRENCY
+    const navigate = useNavigate()
+
   return (
-    <div className='group rounded-xl overflow-hidden shadow-lg hover:translate-y-1 transition-all duration-500 cursor-pointer'>
+    <div onClick={()=> {navigate(`product-details/${product._id}`); scrollTo(0,0)}} ///////////////////////////////////////////
+    className='group rounded-xl overflow-hidden shadow-lg hover:translate-y-1 transition-all duration-500 cursor-pointer'>
       
       <div className='relative h-64 overflow-hidden'>
         <img src={product.image}  alt="product image" className='w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105'/>
