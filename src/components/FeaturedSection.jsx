@@ -3,7 +3,6 @@ import Title from './Title'
 import { assets, dummyCarData } from '../assets/assets'
 import ProductCards from './ProductCards'
 import { useNavigate } from 'react-router-dom'
-import Product from '../pages/Product'
 
 const FeaturedSection = () => {
 
@@ -20,7 +19,7 @@ const FeaturedSection = () => {
      
       {
          dummyCarData.slice(0,6).map((product)=> (
-            <div key={Product._id}>
+            <div key={product._id}>
             <ProductCards product={product}/>
             </div>
          ))
