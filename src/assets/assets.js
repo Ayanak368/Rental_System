@@ -104,7 +104,7 @@ export const assets = {
 };
 export const menuLinks = [
   { name: "Home", path: "/" },
-  { name: "Products", path: "/cars" },
+  { name: "Products", path: "/products" },
   { name: "My Bookings", path: "/my-bookings" },
 ];
 export const ownerMenuLinks = [
@@ -144,10 +144,10 @@ export const dummyCarData = [
   {
     _id: "67ff5bc069c03d4e45f30b77",
     owner: "67fe3467ed8a8fe17d0ba6e2",
-    category: "Lehanga",
+    category: "Lehenga",
     size: "M",
-    material: "Silk",
-    color: "Red",
+    material: "Velvet",
+    color: "Crimson Red",
     occasion: "Wedding",
     image: Royal_Crimson_Lehenga,
     name: "Royal Crimson Lehenga",
@@ -155,6 +155,8 @@ export const dummyCarData = [
     location: "New York",
     description:
       "Deep crimson velvet with golden embroidery. Perfect for weddings and grand celebrations.",
+    fullDescription:
+      "Royal Crimson Lehenga is a beautifully crafted lehenga designed to make you shine at weddings. Made from premium velvet, it combines comfort with elegance, ensuring you feel confident while looking stylish. The crimson red hue adds a rich and vibrant touch, perfect for creating a lasting impression. Each detail, from the golden embroidery to the flawless finishing, reflects meticulous craftsmanship. Ideal for festive celebrations, pairing it with matching accessories completes a regal look.",
     isAvailable: true,
     createdAt: "2025-04-16T07:26:56.215Z",
   },
@@ -172,6 +174,8 @@ export const dummyCarData = [
     location: "Chicago",
     description:
       "Flowing silk gown with sequin details. Ideal for evening parties and receptions.",
+    fullDescription:
+      "Midnight Blue Gown Lehenga is a stunning silk gown perfect for evening parties and receptions. Its flowing fabric and sequin details create a glamorous and elegant look, making you the center of attention. The midnight blue shade adds sophistication, while the soft silk material ensures comfort throughout the event. Pair with stylish accessories to complete your evening ensemble.",
     isAvailable: true,
     createdAt: "2025-04-16T08:33:57.993Z",
   },
@@ -189,6 +193,8 @@ export const dummyCarData = [
     location: "Los Angeles",
     description:
       "Traditional gold-plated choker with filigree design. Complements ethnic outfits beautifully.",
+    fullDescription:
+      "Golden Choker Necklace is a traditional gold-plated piece featuring intricate filigree design, perfect for festive and wedding occasions. Its elegant craftsmanship complements ethnic outfits, adding a touch of luxury and sophistication. Lightweight and stylish, it can be paired with matching earrings or bangles to complete your festive look.",
     isAvailable: true,
     createdAt: "2025-04-16T08:34:39.592Z",
   },
@@ -206,6 +212,8 @@ export const dummyCarData = [
     location: "Houston",
     description:
       "Elegant pearls with gold accents. Subtle touch for festive or wedding wear.",
+    fullDescription:
+      "Pearl Drop Earrings feature elegant pearls accented with gold, making them perfect for festive or wedding occasions. Their delicate design adds a subtle touch of sophistication to any outfit. Lightweight and versatile, these earrings can be paired with necklaces or traditional attire to enhance your overall look.",
     isAvailable: true,
     createdAt: "2025-04-17T06:15:47.318Z",
   },

@@ -11,6 +11,12 @@ const Productdetails = () => {
   const [product, setProduct] = useState(null)
   const [showFullDescription, setShowFullDescription] = useState(false) // <-- toggle state
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+  }
+
+
   useEffect(() => {
     setProduct(dummyCarData.find((product) => product._id === id))
   }, [id])
@@ -104,7 +110,7 @@ const Productdetails = () => {
         </div>
 
         {/* Right: Booking form */}
-        <form className='shadow-lg h-max sticky top-18 rounded-xl p-6 space-y-6 text-gray-500'>
+        <form onSubmit={handleSubmit}  className='shadow-lg h-max sticky top-18 rounded-xl p-6 space-y-6 text-gray-500'>
           <p className='flex items-center justify-between text-2xl text-gray-800 font-semibold'>
             {currency}{product.pricePerDay} <span className='text-base text-gray-400 font-normal'> per day</span></p>
           
