@@ -53,7 +53,6 @@ export const cityList = [
   "Trivandrum",
   "Kollam",
 ];
-
 export const assets = {
   logo,
   gmail_logo,
@@ -103,13 +102,11 @@ export const assets = {
   Golden_Choker_Necklace,
   earing,
 };
-
 export const menuLinks = [
   { name: "Home", path: "/" },
   { name: "Products", path: "/cars" },
   { name: "My Bookings", path: "/my-bookings" },
 ];
-
 export const ownerMenuLinks = [
   {
     name: "Dashboard",
@@ -136,7 +133,6 @@ export const ownerMenuLinks = [
     coloredIcon: listIconColored,
   },
 ];
-
 export const dummyUserData = {
   _id: "6847f7cab3d8daecdb517095",
   name: "GreatStack",
@@ -144,19 +140,17 @@ export const dummyUserData = {
   role: "owner",
   image: user_profile,
 };
-
 export const dummyCarData = [
   {
     _id: "67ff5bc069c03d4e45f30b77",
     owner: "67fe3467ed8a8fe17d0ba6e2",
-    brand: "BMW",
-    model: "X5",
+    category: "Lehanga",
+    size: "M",
+    material: "Silk",
+    color: "Red",
+    occasion: "Wedding",
     image: Royal_Crimson_Lehenga,
-    year: 2006,
     name: "Royal Crimson Lehenga",
-    seating_capacity: 4,
-    fuel_type: "Hybrid",
-    transmission: "Semi-Automatic",
     pricePerDay: 1000,
     location: "New York",
     description:
@@ -167,50 +161,47 @@ export const dummyCarData = [
   {
     _id: "67ff6b758f1b3684286a2a65",
     owner: "67fe3467ed8a8fe17d0ba6e2",
-    brand: "Toyota",
-    model: "Corolla",
+    category: "Gown",
+    size: "L",
+    material: "Silk",
+    color: "Midnight Blue",
+    occasion: "Evening Party",
     image: Midnight_Blue_Gown_Lehenga,
-    year: 2021,
     name: "Midnight Blue Gown Lehenga",
-    seating_capacity: 4,
-    fuel_type: "Diesel",
-    transmission: "Manual",
     pricePerDay: 900,
     location: "Chicago",
     description:
-      "Flowing silk gown with sequin details. Ideal for evening parties and receptions. create this lahenga.",
+      "Flowing silk gown with sequin details. Ideal for evening parties and receptions.",
     isAvailable: true,
     createdAt: "2025-04-16T08:33:57.993Z",
   },
   {
     _id: "67ff6b9f8f1b3684286a2a68",
     owner: "67fe3467ed8a8fe17d0ba6e2",
-    brand: "Jeep ",
-    model: "Wrangler",
+    category: "Necklace",
+    size: "One Size",
+    material: "Gold-Plated",
+    color: "Gold",
+    occasion: "Festive/Wedding",
     image: Golden_Choker_Necklace,
-    year: 2023,
     name: "Golden Choker Necklace",
-    seating_capacity: 4,
-    fuel_type: "Hybrid",
-    transmission: "Automatic",
     pricePerDay: 1500,
     location: "Los Angeles",
     description:
-      " Traditional gold-plated choker with filigree design. Complements ethnic outfits beautifully. create this neckalace",
+      "Traditional gold-plated choker with filigree design. Complements ethnic outfits beautifully.",
     isAvailable: true,
     createdAt: "2025-04-16T08:34:39.592Z",
   },
   {
     _id: "68009c93a3f5fc6338ea7e34",
     owner: "67fe3467ed8a8fe17d0ba6e2",
-    brand: "Ford",
-    model: "Neo 6",
+    category: "Earrings",
+    size: "One Size",
+    material: "Pearls & Gold",
+    color: "White",
+    occasion: "Festive/Wedding",
     image: earing,
-    year: 2022,
     name: "Pearl Drop Earrings",
-    seating_capacity: 2,
-    fuel_type: "Diesel",
-    transmission: "Semi-Automatic",
     pricePerDay: 209,
     location: "Houston",
     description:
@@ -266,7 +257,6 @@ export const dummyMyBookingsData = [
     createdAt: "2025-06-10T09:44:25.410Z",
   },
 ];
-
 export const dummyDashboardData = {
   totalCars: 4,
   totalBookings: 2,

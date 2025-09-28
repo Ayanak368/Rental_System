@@ -7,7 +7,7 @@ const ProductCards = ({product}) => {
     const navigate = useNavigate()
 
   return (
-    <div onClick={()=> {navigate(`/product-details/${product._id}`); scrollTo(0,0)}}
+    <div onClick={()=> {navigate(`product-details/${product._id}`); scrollTo(0,0)}}
     className='group rounded-xl overflow-hidden shadow-lg hover:translate-y-1 transition-all duration-500 cursor-pointer'>
       
       <div className='relative h-64 overflow-hidden'>
