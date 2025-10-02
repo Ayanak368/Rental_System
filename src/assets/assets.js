@@ -115,13 +115,13 @@ export const ownerMenuLinks = [
     coloredIcon: dashboardIconColored,
   },
   {
-    name: "Add car",
+    name: "Add Product",
     path: "/owner/add-car",
     icon: addIcon,
     coloredIcon: addIconColored,
   },
   {
-    name: "Manage Cars",
+    name: "Manage Product",
     path: "/owner/manage-cars",
     icon: carIcon,
     coloredIcon: carIconColored,
@@ -135,7 +135,7 @@ export const ownerMenuLinks = [
 ];
 export const dummyUserData = {
   _id: "6847f7cab3d8daecdb517095",
-  name: "GreatStack",
+  name: "Arun",
   email: "admin@example.com",
   role: "owner",
   image: user_profile,
@@ -266,10 +266,10 @@ export const dummyMyBookingsData = [
   },
 ];
 export const dummyDashboardData = {
-  totalCars: 4,
-  totalBookings: 2,
-  pendingBookings: 0,
+  totalProduct: 4,
+  totalBooking: 2,
+  pendingBooking: 0,
   completedBookings: 2,
-  recentBookings: [dummyMyBookingsData[0], dummyMyBookingsData[1]],
-  monthlyRevenue: 840,
+  recentBooking: [dummyMyBookingsData[0], dummyMyBookingsData[1]],
+  monthlyRevenue: 1900,
 };
