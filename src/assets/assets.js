@@ -105,7 +105,7 @@ export const assets = {
 export const menuLinks = [
   { name: "Home", path: "/" },
   { name: "Products", path: "/products" },
-  { name: "My Bookings", path: "/my-bookings" },
+  { name: "My Bookings", path: "/my-booking" },
 ];
 export const ownerMenuLinks = [
   {
@@ -152,7 +152,7 @@ export const dummyCarData = [
     image: Royal_Crimson_Lehenga,
     name: "Royal Crimson Lehenga",
     pricePerDay: 1000,
-    location: "New York",
+    location: "Calicut",
     description:
       "Deep crimson velvet with golden embroidery. Perfect for weddings and grand celebrations.",
     fullDescription:
@@ -171,7 +171,7 @@ export const dummyCarData = [
     image: Midnight_Blue_Gown_Lehenga,
     name: "Midnight Blue Gown Lehenga",
     pricePerDay: 900,
-    location: "Chicago",
+    location: "kannur",
     description:
       "Flowing silk gown with sequin details. Ideal for evening parties and receptions.",
     fullDescription:
@@ -190,7 +190,7 @@ export const dummyCarData = [
     image: Golden_Choker_Necklace,
     name: "Golden Choker Necklace",
     pricePerDay: 1500,
-    location: "Los Angeles",
+    location: "Trivandrum",
     description:
       "Traditional gold-plated choker with filigree design. Complements ethnic outfits beautifully.",
     fullDescription:
@@ -209,7 +209,7 @@ export const dummyCarData = [
     image: earing,
     name: "Pearl Drop Earrings",
     pricePerDay: 209,
-    location: "Houston",
+    location: "Kollam",
     description:
       "Elegant pearls with gold accents. Subtle touch for festive or wedding wear.",
     fullDescription:
@@ -222,46 +222,46 @@ export const dummyCarData = [
 export const dummyMyBookingsData = [
   {
     _id: "68482bcc98eb9722b7751f70",
-    car: dummyCarData[0],
+    product: dummyCarData[0],
     user: "6847f7cab3d8daecdb517095",
     owner: "6847f7cab3d8daecdb517095",
     pickupDate: "2025-06-13T00:00:00.000Z",
     returnDate: "2025-06-14T00:00:00.000Z",
     status: "confirmed",
-    price: 440,
+    price: 1000,
     createdAt: "2025-06-10T12:57:48.244Z",
   },
   {
     _id: "68482bb598eb9722b7751f60",
-    car: dummyCarData[1],
+    product: dummyCarData[1],
     user: "6847f7cab3d8daecdb517095",
     owner: "67fe3467ed8a8fe17d0ba6e2",
     pickupDate: "2025-06-12T00:00:00.000Z",
     returnDate: "2025-06-12T00:00:00.000Z",
     status: "pending",
-    price: 130,
+    price: 900,
     createdAt: "2025-06-10T12:57:25.613Z",
   },
   {
     _id: "684800fa0fb481c5cfd92e56",
-    car: dummyCarData[2],
+    product: dummyCarData[2],
     user: "6847f7cab3d8daecdb517095",
     owner: "67fe3467ed8a8fe17d0ba6e2",
     pickupDate: "2025-06-11T00:00:00.000Z",
     returnDate: "2025-06-12T00:00:00.000Z",
     status: "pending",
-    price: 600,
+    price: 1500,
     createdAt: "2025-06-10T09:55:06.379Z",
   },
   {
     _id: "6847fe790fb481c5cfd92d94",
-    car: dummyCarData[3],
+    product: dummyCarData[3],
     user: "6847f7cab3d8daecdb517095",
     owner: "6847f7cab3d8daecdb517095",
     pickupDate: "2025-06-11T00:00:00.000Z",
     returnDate: "2025-06-12T00:00:00.000Z",
     status: "confirmed",
-    price: 440,
+    price: 209,
     createdAt: "2025-06-10T09:44:25.410Z",
   },
 ];
