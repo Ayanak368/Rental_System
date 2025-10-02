@@ -11,6 +11,7 @@ import Dashboard from './pages/owner/Dashboard'
 import AddProduct from './pages/owner/AddProduct'
 import ManageProduct from './pages/owner/ManageProduct'
 import ManageBooking from './pages/owner/ManageBooking'
+import Login from './components/Login'
 
 const App = () => {
 
@@ -18,8 +19,11 @@ const[ShowLogin,setShowLogin] = useState(false)
 const isOwnerPath = useLocation().pathname.startsWith('/owner')
   return (
     <>
-      {!isOwnerPath && <Navbar setShowLogin={setShowLogin} />}
+      {ShowLogin && <Login setShowLogin={setShowLogin} />}
+      
 
+      {!isOwnerPath && <Navbar setShowLogin={setShowLogin} />}
+      
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/product-details/:id' element={<Productdetails/>}/>
