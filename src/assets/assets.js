@@ -45,6 +45,7 @@ import Royal_Crimson_Lehenga from "./Royal_Crimson_Lehenga.png";
 import Midnight_Blue_Gown_Lehenga from "./Midnight_Blue_Gown_Lehenga.png";
 import Golden_Choker_Necklace from "./Golden_Choker_Necklace.png";
 import earing from "./earing.png";
+import dress from "./dress.svg";
 export const cityList = [
   "Calicut",
   "Kasargod",
@@ -101,6 +102,7 @@ export const assets = {
   Midnight_Blue_Gown_Lehenga,
   Golden_Choker_Necklace,
   earing,
+  dress,
 };
 export const menuLinks = [
   { name: "Home", path: "/" },

@@ -1,20 +1,68 @@
 import React, { useEffect, useState } from 'react'
-import { assets, dummyCarData } from '../../assets/assets'
 import Title from '../../components/owner/Title'
+import { useAppContext } from '../../context/AppContext';
+import toast from 'react-hot-toast';
+import { assets } from '../../assets/assets';
 
 const ManageProduct = () => {
 
-  const currency=import.meta.env.VITE_CURRENCY
+  const {isOwner,axios,currency} = useAppContext()
 
-  const [product, setProduct] = useState([])
+  
+
+  const [products, setProducts] = useState([])
   
   const fetchOwnerProducts = async () => {
-    setProduct(dummyCarData)
+    try {
+      const { data } = await axios.get('/api/owner/products')
+      if (data.success) {
+        setProducts(data.products)
+      } else {
+        toast.error(data.message)
+      }
+    } catch (error) {
+      toast.error(error.message)
+
+    }
+  }
+
+  const toggleAvailability = async (productId) => {
+    try {
+      const { data } = await axios.post('/api/owner/toggle-product',{productId})
+      if (data.success) {
+        toast.success(data.message)
+        fetchOwnerProducts()
+      } else {
+        toast.error(data.message)
+      }
+    } catch (error) {
+      toast.error(error.message)
+
+    }
+  }
+  const deleteProduct = async (productId) => {
+    try {
+        
+      const confirm = window.confirm("Are you sure you want to delete this product?")
+
+      if(!confirm) return null 
+
+      const { data } = await axios.post('/api/owner/delete-product',{productId})
+      if (data.success) {
+        toast.success(data.message)
+        fetchOwnerProducts()
+      } else {
+        toast.error(data.message)
+      }
+    } catch (error) {
+      toast.error(error.message)
+
+    }
   }
 
   useEffect(() => {
-    fetchOwnerProducts()
-  },[])
+   isOwner && fetchOwnerProducts()
+  },[isOwner])
   return (
     <div className='px-4 pt-10 md:px-10 w-full'>
       <Title title='Manage Products' subtitle='View all listed items,update their detail,or remove them from the booking platform' />
@@ -31,7 +79,7 @@ const ManageProduct = () => {
             </tr>
           </thead>
           <tbody>
-            {product.map((product, index) => (
+            {products.map((product, index) => (
               <tr key={index} className='border-t border-borderColor'>
                 <td className='p-3 flex items-center gap-3'>
                   <img src={product.image} alt="" className='h-12 aspect-square rounded-md object-cover'/>
@@ -50,8 +98,11 @@ const ManageProduct = () => {
                </span>
                 </td>
                 <td className='flex items-center p-3'>
-                  <img src={product.isAvailable ? assets.eye_close_icon : assets.eye_icon} alt="" className='cursor-pointer' />
-                  <img src={ assets.delete_icon} alt="" className='cursor-pointer' />
+                  
+                  <img onClick={()=>toggleAvailability(product._id)} src={product.isAvailable ? assets.eye_close_icon : assets.eye_icon} alt="" className='cursor-pointer' />
+
+
+                  <img onClick={()=>deleteProduct(product._id)} src={ assets.delete_icon} alt="" className='cursor-pointer' />
 
                 </td>
               </tr>
