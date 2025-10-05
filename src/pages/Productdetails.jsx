@@ -4,6 +4,7 @@ import { assets } from '../assets/assets';
 import Loader from '../components/Loader';
 import { useAppContext } from '../context/AppContext';
 import toast from 'react-hot-toast';
+import{motion} from 'motion/react'
 
 const Productdetails = () => {
   const { id } = useParams();
@@ -72,9 +73,21 @@ const Productdetails = () => {
 
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12'>
         {/* Left */}
-        <div className='lg:col-span-2'>
-          <img src={product.image} alt={product.name} className='w-full max-h-[500px] object-contain rounded-xl mb-6 shadow-md'/>
-          <div className='space-y-6'>
+        <motion.div
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{duration:0.6}}
+          className='lg:col-span-2'>
+          <motion.img
+            initial={{ scale:0.98, opacity: 0 }}
+            animate={{ scale:1, opacity: 1 }}
+            transition={{duration:0.5}}
+            src={product.image} alt={product.name} className='w-full max-h-[500px] object-contain rounded-xl mb-6 shadow-md' />
+          <motion.div
+            initial={{opacity: 0 }}
+            animate={{opacity: 1 }}
+            transition={{duration:0.5,delay:0.5}}
+            className='space-y-6'>
             <div>
               <h1 className='text-3xl font-bold'>{product.category}</h1>
               <p>{product.name}</p>
@@ -89,10 +102,14 @@ const Productdetails = () => {
                 { label: "Colour", value: product.colour },
                 { label: "Occasion", value: product.occasion },
               ].map(({ label, value }) => (
-                <div key={label} className="flex flex-col items-center justify-center px-4 py-3 bg-white shadow-md rounded-xl min-w-[100px] hover:scale-105 transition-transform duration-300">
+                <motion.div
+                initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                 transition={{duration:0.4}}
+                  key={label} className="flex flex-col items-center justify-center px-4 py-3 bg-white shadow-md rounded-xl min-w-[100px] hover:scale-105 transition-transform duration-300">
                   <span className="text-gray-500 text-sm">{label}</span>
                   <span className="font-semibold text-gray-800">{value}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -126,11 +143,15 @@ const Productdetails = () => {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Right: Booking Form */}
-        <form onSubmit={handleSubmit} className='shadow-lg h-max sticky top-16 rounded-xl p-6 space-y-6 text-gray-500'>
+        <motion.form
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{duration:0.6,delay:0.3}}
+          onSubmit={handleSubmit} className='shadow-lg h-max sticky top-16 rounded-xl p-6 space-y-6 text-gray-500'>
           <p className='flex items-center justify-between text-2xl text-gray-800 font-semibold'>
             {currency}{product.pricePerDay} <span className='text-base text-gray-400 font-normal'> per day</span>
           </p>
@@ -150,7 +171,7 @@ const Productdetails = () => {
             Book Now
           </button>
           <p className='text-center text-sm'>No credit card required to reserve</p>
-        </form>
+        </motion.form>
       </div>
     </div>
   );

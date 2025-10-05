@@ -1,9 +1,19 @@
 import React from "react";
+import{easeOut, motion} from 'motion/react'
+
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col bg-white items-center justify-around w-full py-16 text-sm text-gray-800/70">
-      <div className="flex items-center gap-8">
+    <motion.footer
+    initial={{ y:30, opacity: 0 }}
+    whileInView={{ opacity: 1, y: 0 }}
+   transition={{duration:0.6}}
+      className="flex flex-col bg-white items-center justify-around w-full py-16 text-sm text-gray-800/70">
+      <motion.div
+        initial={{ y:20, opacity: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+       transition={{duration:0.4,delay:0.2}}
+        className="flex items-center gap-8">
         <a href="#" className="font-medium text-gray-500 hover:text-black transition-all">
           Home
         </a>
@@ -19,7 +29,7 @@ const Footer = () => {
         <a href="#" className="font-medium text-gray-500 hover:text-black transition-all">
           Help
         </a>
-      </div>
+      </motion.div>
 
       <div className="flex items-center gap-4 mt-8 text-indigo-500">
         {/* Facebook Icon */}
@@ -70,7 +80,7 @@ const Footer = () => {
         Copyright © 2025 <a href="" className="text-indigo-500 hover:underline">FitOnRent</a>.
         All rights reserved.
       </p>
-    </footer>
+    </motion.footer>
   );
 };
 

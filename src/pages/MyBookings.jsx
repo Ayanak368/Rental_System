@@ -3,6 +3,7 @@ import { assets } from '../assets/assets'
 import Title from '../components/Title'
 import { useAppContext } from '../context/AppContext'
 import toast from 'react-hot-toast'
+import{motion} from 'motion/react'
 
 const MyBookings = () => {
 
@@ -27,14 +28,22 @@ const [booking, setBookings] = useState([])
   }, [user])
 
   return (
-    <div className='px-6 md:px-16 lg:px-24 xl:px-32 2xl:px-48 mt-16 text-sm max-w-7xl'>
+    <motion.div
+    initial={{ y: 30, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{duration:0.5}}
+      className='px-6 md:px-16 lg:px-24 xl:px-32 2xl:px-48 mt-16 text-sm max-w-7xl'>
       <Title title='My Booking'
         subtitle='View and Manage your Booking'
         align="left" />
       
       <div>
         {booking.map((booking,index) => (
-          <div key={booking._id} className='grid grid-cols-1 md:grid-cols-4 gap-6 p-6 border border-borderColor
+          <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{duration:0.4}}
+            key={booking._id} className='grid grid-cols-1 md:grid-cols-4 gap-6 p-6 border border-borderColor
            rounded-lg mt-5 first:mt-12'>
             {/* {/*image +info*} */}
             <div className='md:col-span-1'>
@@ -81,12 +90,12 @@ const [booking, setBookings] = useState([])
               </div>
             </div>
 
-        </div>
+        </motion.div>
       ))}
 
       </div>
 
-    </div>
+    </motion.div>
   )
 }
 
