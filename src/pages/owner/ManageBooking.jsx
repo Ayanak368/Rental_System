@@ -40,7 +40,7 @@ const ManageBooking = () => {
   
   return (
     <div className='px-4 pt-10 md:px-10 w-full'>
-    <Title title='Manage Bookinng' subtitle='Track all customer booking,approve or cancel request,and manage booking statuses' />
+    <Title title='Manage Booking' subtitle='Track all customer booking,approve or cancel request,and manage booking statuses' />
     
     <div className='max-w-3xl w-full rounded-md overflow-hidden border border-borderColor mt-6'>
       <table className='w-full border-collapse text-left text-sm text-gray-600'>

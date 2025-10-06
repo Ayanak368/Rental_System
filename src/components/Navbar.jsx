@@ -67,7 +67,7 @@ const Navbar = () => {
             onClick={() => (isOwner ? navigate("/owner") : changeRole())}
             className="cursor-pointer"
           >
-            {isOwner ? "Dashboard" : "List Cars"}
+            {isOwner ? "Dashboard" : "List Products"}
           </button>
 
           {/* Fix: Render button only after loading */}
